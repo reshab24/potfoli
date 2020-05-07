@@ -1,0 +1,47 @@
+<div class="profile" #profile>
+    <div class="profile_img" [@fadein]="fadeinState">
+    </div>
+    <div class="profile_info">
+        <div class="profile_info_header" [@fadein]="fadeinState">
+            About Me
+        </div>
+        <div class="profile_info_contant" [@fadein]="fadeinState">
+            I am web developer . i'am passinate for Front-end Technologies. I stand for quality coding
+        </div>
+    </div>
+</div>
+<div class="history" #history>
+    <div class="history_card" *ngFor="let data of historyArrayData">
+        <div class="history_card_header" [@fadein]="fadeinState">
+            {{data.header}}
+        </div>
+        <div class="history_card_contant">
+            {{data.contant}}
+        </div>
+    </div>
+    <!-- <div class="history_card">
+        <div class="history_card_header">
+            conaug
+        </div>
+        <div class="history_card_contant">
+            web developer
+        </div>
+    </div> -->
+    <!-- <div class="history_card">
+        <div class="history_card_header">
+            conaug
+        </div>
+        <div class="history_card_contant">
+            web developer
+        </div>
+    </div> -->
+
+    <!-- <div class="history_card">
+        <div class="history_card_header">
+            conaug
+        </div>
+        <div class="history_card_contant">
+            web developer
+        </div>
+    </div> -->
+</div>

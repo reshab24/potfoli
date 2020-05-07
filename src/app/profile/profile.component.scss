@@ -1,0 +1,104 @@
+@import '../../assets/scss/variables.scss';
+.profile {
+    display: flex;
+    justify-content: center;
+    margin: 70px 20px;
+    flex-flow: row wrap;
+    &_img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 5px solid $primaryColor;
+        box-shadow: inset 10px -10px 25px $primaryColor, inset -10px 10px 25px $primaryColor;
+        background-image: url('../../assets/images/rishab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 100px;
+    }
+    &_info {
+        width: 400px;
+        &_header {
+            color: $primaryColor;
+            font-size: 3.75em;
+            line-height: 1.5em;
+            letter-spacing: 0.1em;
+            &::after {
+                // width: 2.91667em;
+                // content: "";
+                // position: absolute;
+                // left: 0;
+                // bottom: 0;
+                // width: 2.91667em;
+                // width: 0;
+                // height: 1px;
+                // background: #bea187;
+            }
+        }
+        &_contant {
+            font-size: 1.25em;
+            line-height: 1.5em;
+            margin-bottom: 3em;
+        }
+    }
+}
+
+.history {
+    margin: 3em 5em;
+    width: 90%;
+    max-width: 1170px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        left: 50%;
+        top: 50%;
+        // margin-left: -2px;
+        content: '';
+        position: absolute;
+        height: 110%;
+        width: 2px;
+        transform: translate(-50%, -50%);
+        background: #00c1c5;
+    }
+    &_card {
+        width: 45%;
+        background-color: gold;
+        padding: 1.6em;
+        box-shadow: 0 2px 0 #00c1c5;
+        position: relative;
+        &::before {
+            background-image: url('https://picsum.photos/1600/720');
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 100%;
+            height: 0;
+            width: 0;
+            border: 7px solid transparent;
+            border-left-color: black;
+        }
+        &:nth-of-type(even) {
+            align-self: flex-end;
+        }
+        &_header {
+            color: $primaryColor;
+            font-weight: 500;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        &_contant {
+            font-size: 1em;
+            line-height: 1.75em;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .profile {
+        &_img {
+            margin-right: 0px;
+        }
+    }
+}

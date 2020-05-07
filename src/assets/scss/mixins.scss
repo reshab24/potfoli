@@ -1,0 +1,23 @@
+@import './variables.scss';
+// transform
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+
+/*  */
+
+@mixin continueButton() {
+    background-color: $primaryColor;
+    border-radius: 30px;
+    color: $contrastColor;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@mixin backButton() {
+    @include continueButton();
+    background-color: $contrastShade;
+}
